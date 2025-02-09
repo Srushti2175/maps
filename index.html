@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Maps Directions for Car Travel</title>
+    <link rel="stylesheet" href="map.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDxI854qOUf0xVsWps6BzIWL59HWolw7kM&libraries=places"></script>
+    <script defer src="map.js"></script>
+</head>
+<body>
+
+    <h1>Google Maps</h1>
+
+    <div id="controls">
+        <p>
+            Start Location: 
+            <input type="text" id="startLocation" placeholder="Enter start location">
+            <button onclick="setCurrentLocationAsStart()">Use Current Location</button>
+        </p>
+        <p>
+            End Location: 
+            <input type="text" id="endLocation" placeholder="Enter end location">
+        </p>
+        <button onclick="getDirections()">Get Directions</button>
+    </div>
+
+    <p id="userLocation"></p>
+    <p id="distance"></p>
+
+    <div id="map"></div>
+
+</body>
+</html>
